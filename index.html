@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <div id="all">
+        <img src="cute-please.gif" alt="lyn">
+        <h1>Will you be my Valentine?</h1>
+        <div id="container">
+                <button id="yesBtn" class="button-10" role="button" onClick="yesshowDiv();playAudio('happy-happy-happy.mp3')">
+                    <span class="text">YES</span>
+                </button>
+            <button id="noBtn" class="button-9" role="button" onClick="noshowDiv();playAudio('sad-cat.mp3')">
+                <span class="text">NO</span>
+            </button>
+        </div>  
+    </div>
+
+    <div id="yes-show-this" style="display:none;">
+        <div id="all">
+        <img class="center" src="cat-cat-jumping.gif" alt="lyn">
+        <h2>YIPPIEEEEEEEEEEEEEEEEEEEEEEEEEEEE</h2>
+    </div>
+    </div> 
+    <div id="no-show-this" style="display:none;">
+        <div id="all">
+        <img class="center" src="sad-cat.gif" alt="lyn">
+        <h2>NOOOOOOOOOOOOOOOOOOOOO :( (YOU CLICKED THE WRONG BUTTON, RIGHT?)</h2>
+        <button id="yesBtn" class="button-10" role="button" onClick="goBackDiv()">
+            <span class="text">YES</span>
+        </button>
+    </div>   
+    </div>  
+
+    <script>
+            function yesshowDiv() {
+    document.getElementById('yes-show-this').style.display = "block";
+    document.getElementById('all').style.display = "none";
+    }
+
+    function goBackDiv() {
+        document.getElementById('no-show-this').style.display = "none";
+        document.getElementById('all').style.display = "grid";
+    }
+
+    
+    function noshowDiv() {
+    document.getElementById('no-show-this').style.display = "block";
+    document.getElementById('all').style.display = "none";
+    }
+    let audio;
+
+    function pauseAudio() {
+  // If audio is not undefined and if is playing, pause i
+
+  if (audio && !audio.paused) {
+    audio.pause();
+    audio.currentTime = 0; // Rewind track to beginning (is you need this)
+  }
+    }
+
+    function playAudio(src) {
+        pauseAudio();             // Pause any currently playing
+  audio = new Audio();      // Save a reference
+  audio.src = src;
+  audio.play();
+    }
+/**
+    function noplayAudio() {
+    const audio = new Audio('sad-cat.mp3');
+    audio.play();
+    } */
+
+    </script>
+    </body>
+</html>
+

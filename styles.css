@@ -1,0 +1,142 @@
+#all {
+    display: grid;
+    place-items: center;
+}
+
+
+
+button {
+    display:inline-block;
+}
+
+#container {
+    text-align: center;
+    
+}
+
+body {
+    font-family: 'Playball';
+}
+
+h1 {
+    color: rgb(233, 77, 103);
+}
+
+  button.button-10 {
+  touch-action: manipulation;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+button.button-10 {
+  touch-action: manipulation;
+  font-weight: 600;
+  color: #382b22;
+  text-transform: uppercase;
+  padding: 1.25em 2em;
+  background: #ffffff;
+  border: 2px solid #8f5dd5;
+  border-radius: 0.75em;
+  transform-style: preserve-3d;
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+button.button-10::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #bd84ef;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px #a694ab, 0 0.625em 0 0 #998aa2;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+button.button-10:hover {
+  background: #f5e6f9;
+  transform: translate(0, 0.25em);
+}
+button.button-10:hover::before {
+  box-shadow: 0 0 0 2px #a772da, 0 0.5em 0 0 #9a80db;
+  transform: translate3d(0, 0.5em, -1em);
+}
+button.button-10:active {
+  background: #947cdd;
+  transform: translate(0em, 0.75em);
+}
+button.button-10:active::before {
+  box-shadow: 0 0 0 2px #785bc7, 0 0 #6a3fa9;
+  transform: translate3d(0, 0, -1em);
+}
+
+
+button.button-9 {
+    touch-action: manipulation;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button.button-9 {
+    touch-action: manipulation;
+    font-weight: 600;
+    color: #382b22;
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: #ffffff;
+    border: 2px solid #e07c7c;
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+  
+button.button-9::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ef8490;
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px #b69caa, 0 0.625em 0 0 #a28a9d;
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.button-9:hover {
+    background: #f9e6ea;
+    transform: translate(0, 0.25em);
+}
+  
+button.button-9:hover::before {
+    box-shadow: 0 0 0 2px #da72a9, 0 0.5em 0 0 #db80a1;
+    transform: translate3d(0, 0.5em, -1em);
+}
+  
+button.button-9:active {
+    background: #dd7c8f;
+    transform: translate(0em, 0.75em);
+}
+  
+button.button-9:active::before {
+    box-shadow: 0 0 0 2px #c75b7f, 0 0 #a93f62;
+    transform: translate3d(0, 0, -1em);
+}
